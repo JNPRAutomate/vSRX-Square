@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #vSRX 1
   config.vm.define "srx1" do |srx|
+    srx.vm.network "forwarded_port", guest: 830, host: 8831
     srx.vm.box = "juniper/ffp-12.1X47-D20.7"
     srx.vm.hostname = "SRX1"
     srx.vm.network "private_network",
@@ -68,6 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   #vSRX 2
     config.vm.define "srx2" do |srx|
+      srx.vm.network "forwarded_port", guest: 830, host: 8832
       srx.vm.box = "juniper/ffp-12.1X47-D20.7"
       srx.vm.hostname = "SRX2"
       srx.vm.network "private_network",
@@ -125,6 +127,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     #vSRX 3
       config.vm.define "srx3" do |srx|
+        srx.vm.network "forwarded_port", guest: 830, host: 8833
         srx.vm.box = "juniper/ffp-12.1X47-D20.7"
         srx.vm.hostname = "SRX3"
         srx.vm.network "private_network",
@@ -182,6 +185,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       #vSRX 3
         config.vm.define "srx4" do |srx|
+          srx.vm.network "forwarded_port", guest: 830, host: 8834
           srx.vm.box = "juniper/ffp-12.1X47-D20.7"
           srx.vm.hostname = "SRX4"
           srx.vm.network "private_network",

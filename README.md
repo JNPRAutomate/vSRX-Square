@@ -19,6 +19,17 @@ SRX2--------------SRX4
 
 ```
 
+## Interface Naming
+
+### Access Note
+
+For NETCONF testing each node has its NETCONF port exposed via port forwarding.
+
+- vSRX1 - 8831
+- vSRX2 - 8832
+- vSRX3 - 8833
+- vSRX4 - 8834
+
 ### Vagrant Note
 
 Do to the inner workings of Vagrant each host has a virtual NIC connected back to the host running the virtual machines. This allows Vagrant to provision and control each VM over the SSH protocol. These interfaces are depicted on the topology above.
