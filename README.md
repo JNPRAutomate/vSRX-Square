@@ -6,10 +6,17 @@ A topology containing two vSRXs that can be used to interoperate with each other
 Topology
 ========
 
-The topology consists of four VMs: Client, Server, and two vSRXs. Thes vSRX are set in between the client and the server. The two vSRX can be used to test various connections between each other such as MPLS, IPsec, and dynamic routing. Both the client and the server have appropriate routes pointing to the vSRXs so they can access each other through the vSRXs.
+The topology consists of four VMs: four vSRXs. Thes vSRX are configured in a star topology where each node is connected to each other.
 
 ```
-TBD
+
+SRX1--------------SRX3
+ | \             / |
+ |  | _ _ _ _____| |
+ |  _______X_ _ _  |
+ | /             \ |
+SRX2--------------SRX4
+
 ```
 
 ### Vagrant Note
