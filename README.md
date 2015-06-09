@@ -21,6 +21,8 @@ SRX2--------------SRX4
 
 ## Interface Naming
 
+All links are defined as low to high. So if an 
+
 ### Access Note
 
 For NETCONF testing each node has its NETCONF port exposed via port forwarding.
